@@ -5,10 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Minerva') }}</title>
+    <title>{{ config('app.name', 'Hoteles Minerva') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -51,6 +50,7 @@
                         </li>
                         @endif
                         @else
+                        
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link"  href="{{ route('home') }}">Reservas disponibles</a>
@@ -85,6 +85,14 @@
             @yield('content')
         </main>
     </div>
+    
+
+  <footer>
+    <p>&copy; 2023 Minerva - Reserva de Hoteles</p>
+  </footer>
+
+</body>
+</html>
 </body>
 
 </html>

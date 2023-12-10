@@ -4,18 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LikeController;
 
 
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
 Route::get('/', function () {
     return view('auth.login');
 });
@@ -30,3 +18,4 @@ Route::post('/eliminarFoto', [App\Http\Controllers\FotoController::class, 'elimi
 Route::post('/subirComentario', [App\Http\Controllers\FotoController::class, 'subirComentario'])->name('subirComentario');
 Route::post('/eliminarComentario', [App\Http\Controllers\FotoController::class, 'eliminarComentario'])->name('eliminarComentario');
 Route::post('/comentario/{id}/like', [LikeController::class, 'likeComentario'])->name('comentario.like');
+Route::get('/enviarApi', [App\Http\Controllers\FotoController::class, 'enviarApi'])->name('enviarApi');
